@@ -2,8 +2,8 @@ const CACHE_NAME = 'dailytext-cache-v1';
 const ASSETS = [
   './',
   './index.html',
-  './styles/main.css',
-  './scripts/main.js',
+  './styles.css',
+  './scripts.js',
   './manifest.json'
 ];
 
