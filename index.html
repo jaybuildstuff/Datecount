@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DailyText</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>DailyText</h1>
+    <div id="message">Loading...</div>
+    <button id="next">Next Message</button>
+    <div id="count">Shown: 0 times</div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('sw.js')
+          .catch(err => console.error('Service Worker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
